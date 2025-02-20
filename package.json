@@ -1,0 +1,12 @@
+{
+  "name": "blog-ia",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andres L, Franklin H, Kilmer H, Mariam O",
+  "license": "MIT",
+  "description": "Blog sobre la Inteligencia Artificial en Venezuela"
+}

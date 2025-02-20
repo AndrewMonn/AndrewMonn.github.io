@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog IA en Venezuela</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- HERO SECTION -->
+    <section class="relative">
+      <img
+        src="https://i.ytimg.com/vi/RpkUoKHh3IQ/maxresdefault.jpg"
+        alt="Hero Image"
+        class="w-full h-[450px] object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-6"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold">🤖 IA en Venezuela</h1>
+        <p class="text-lg md:text-xl mt-4">
+          Descubre cómo la Inteligencia Artificial está transformando sectores
+          clave del país.
+        </p>
+      </div>
+    </section>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo / Nombre -->
+        <a href="index.html" class="text-xl font-bold text-gray-700"
+          >🌐 IA Venezuela</a
+        >
+
+        <!-- Botón Hamburguesa (Mobile) -->
+        <button
+          id="menu-toggle"
+          class="lg:hidden text-gray-700 text-2xl focus:outline-none"
+        >
+          ☰
+        </button>
+
+        <!-- Menú de Navegación -->
+        <ul id="menu" class="hidden lg:flex space-x-6">
+          <li>
+            <a
+              href="index.html"
+              class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 transition"
+              >🏠 Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="salud.html"
+              class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition"
+              >🏥 Salud</a
+            >
+          </li>
+          <li>
+            <a
+              href="educacion.html"
+              class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-700 transition"
+              >🎓 Educación</a
+            >
+          </li>
+          <li>
+            <a
+              href="economia.html"
+              class="px-4 py-2 bg-yellow-500 text-gray-800 rounded-md hover:bg-yellow-600 transition"
+              >💰 Economía</a
+            >
+          </li>
+          <li>
+            <a
+              href="seguridad.html"
+              class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 transition"
+              >🛡️ Seguridad</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Menú Móvil -->
+      <ul
+        id="mobile-menu"
+        class="hidden flex flex-col items-center space-y-4 bg-gray-100 p-4 lg:hidden"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block w-full text-center px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-700 transition"
+            >🏠 Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="salud.html"
+            class="block w-full text-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition"
+            >🏥 Salud</a
+          >
+        </li>
+        <li>
+          <a
+            href="educacion.html"
+            class="block w-full text-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-700 transition"
+            >🎓 Educación</a
+          >
+        </li>
+        <li>
+          <a
+            href="economia.html"
+            class="block w-full text-center px-4 py-2 bg-yellow-500 text-gray-800 rounded-md hover:bg-yellow-600 transition"
+            >💰 Economía</a
+          >
+        </li>
+        <li>
+          <a
+            href="seguridad.html"
+            class="block w-full text-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-700 transition"
+            >🛡️ Seguridad</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section class="mt-10 bg-gray-200 py-10">
+      <div
+        class="max-w-3xl mx-auto text-center py-10 px-6 bg-white rounded-lg shadow-lg mb-8"
+      >
+        <h2 class="text-3xl font-bold text-blue-600 mb-4">
+          🚀 Transformación con Inteligencia Artificial
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Descubre cómo la Inteligencia Artificial está revolucionando sectores
+          clave en Venezuela. Desde la salud hasta la economía, pasando por la
+          educación y la seguridad, la IA está cambiando nuestra forma de vivir
+          y trabajar. Acompáñanos en este viaje para explorar innovaciones
+          tecnológicas que están dando forma al futuro del país y mejorando la
+          calidad de vida de sus ciudadanos.
+        </p>
+      </div>
+
+      <h2 class="text-3xl font-semibold text-center mb-6">
+        📖 Artículos Destacados
+      </h2>
+      <div class="max-w-6xl mx-auto relative overflow-hidden">
+        <button
+          id="prev-article"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-2 rounded-md hover:bg-gray-900 transition z-10"
+        >
+          ⬅
+        </button>
+        <div id="carousel-articles-wrapper" class="overflow-hidden">
+          <div
+            id="carousel-articles"
+            class="flex transition-transform duration-500 ease-in-out"
+          >
+            <div
+              class="grid grid-cols-2 gap-6 min-w-full p-6 flex-shrink-0 article-slide"
+            >
+              <div class="bg-white shadow-lg p-5 rounded-lg">
+                <img
+                  src="https://thumbs.dreamstime.com/z/nya-tekniker-f%C3%B6r-liv-70757867.jpg"
+                  alt="IA en la Salud"
+                  class="w-full h-48 object-cover rounded-lg"
+                />
+                <h3 class="text-xl font-bold mt-4">🏥 IA en la Salud</h3>
+                <p class="text-gray-600 mt-2">
+                  La IA está mejorando diagnósticos médicos y tratamientos en
+                  Venezuela.
+                </p>
+                <a
+                  href="salud.html"
+                  class="text-blue-500 font-semibold mt-2 block"
+                  >Leer más ➝</a
+                >
+              </div>
+              <div class="bg-white shadow-lg p-5 rounded-lg">
+                <img
+                  src="https://kartinki.pibig.info/uploads/posts/2024-02/1708790570_kartinki-pibig-info-p-inklyuzivnoe-obrazovanie-kartinki-instagra-44.jpg"
+                  alt="IA en la Educación"
+                  class="w-full h-48 object-cover rounded-lg"
+                />
+                <h3 class="text-xl font-bold mt-4">🎓 IA en la Educación</h3>
+                <p class="text-gray-600 mt-2">
+                  Las plataformas con IA están revolucionando la enseñanza.
+                </p>
+                <a
+                  href="educacion.html"
+                  class="text-green-500 font-semibold mt-2 block"
+                  >Leer más ➝</a
+                >
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-2 gap-6 min-w-full p-6 flex-shrink-0 article-slide"
+            >
+              <div class="bg-white shadow-lg p-5 rounded-lg">
+                <img
+                  src="https://d3wo5wojvuv7l.cloudfront.net/t_rss_itunes_square_1400/images.spreaker.com/original/b8453efd9e4681187d9067fe35464fa1.jpg"
+                  alt="IA en la Economía"
+                  class="w-full h-48 object-cover rounded-lg"
+                />
+                <h3 class="text-xl font-bold mt-4">💰 IA en la Economía</h3>
+                <p class="text-gray-600 mt-2">
+                  Optimización de procesos financieros y mercado en Venezuela.
+                </p>
+                <a
+                  href="economia.html"
+                  class="text-yellow-500 font-semibold mt-2 block"
+                  >Leer más ➝</a
+                >
+              </div>
+              <div class="bg-white shadow-lg p-5 rounded-lg">
+                <img
+                  src="https://yandex-images.clstorage.net/s4rfF9202/2a5b44sHu/F-yG6B1UpKvJRR67eJoO8FVfWpm19Nckqk2YCeV8ERiYAUyYh72zuvRjecuO3reqnsXMSR7gT_BhSw4xtd-k4xO1l5RlKLDjyRhLsyTvWuQNBy-hbQRzuW7xCNAl3M3tMKHErIfgnufYDiy-82934gOcxURX-Y4ZMDLTQAw-0SKb-A8J-Py8t8lNKt_xPj5ILOOe2QUwh_kmkcxs9bRBXRBZKERXcJ4b-QYc4lMbNk6jLMFoR0kOMSQ6_4Cw3gmKZ8TDzSzgNCPxkQo3gTaygJQ3_tWp6CMNKtEEAOEogYmUpeBEm3juP4HuyA77pxKGx7TZKGthtm0gyv8s-Kq57ufs7xGEIHwrKS1W050mnnyox_JFoajvYYa1UHTRRFFxZDXE7LvgojPZFmAW5ysqPoNg1WAb8Tb5ED53CFy-BR5_zJ9FJHhs-8Ux2scFwq70_OOqvSVQR2UOUYhgvTwh4XSJ7AQLzObvkd6IOu8XqiqPGLGox72-HYzq7_xEOom233hvJfjM8Pf1uS7LAUKCeLwjVi3JABeJotlsSOH85R3sqZhUp1QCXxGyQBIfI5Zuw6xBwHPxXpmE-q8EvDpRBmMQR0n0yIDL2aVaz3l2jvTcz3J5OYxL1fodkMA9AKl1CJ3IKGMMvmNhbijqG3NS_iNMnYTnuQ7tsCpbqNCeKfL7_JtR6Kg0l92RMuedNh4k3H-qQRnAx61KbaCwdVDVFfTVIHRHEBproSZgRm97NtqnNLnMC6kqsQQmN3j0mvE6V8znsfig-LdR3So76fbeOPzDEtVN8GPpHvlAvMWAqV2IwahMB3Dux_XWKAqXyyIqk-BVzNd17oXsvn_8xD6x5lMMh1EYdCS_BcnWJzlKhlS8p-qZ5WDT6ToRQJDV7C0RtElEQB9Awv9ROmiKo7viWhdAyeyf8RIdmH4vSOgutQJvNE_hMNisy8F1el-BlhK8TLcy_QUE_-EKbSxc7WiM"
+                  alt="IA en la Seguridad"
+                  class="w-full h-48 object-cover rounded-lg"
+                />
+                <h3 class="text-xl font-bold mt-4">🛡️ IA en la Seguridad</h3>
+                <p class="text-gray-600 mt-2">
+                  Uso de IA en vigilancia inteligente y ciberseguridad.
+                </p>
+                <a
+                  href="seguridad.html"
+                  class="text-red-500 font-semibold mt-2 block"
+                  >Leer más ➝</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          id="next-article"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-3 py-2 rounded-md hover:bg-gray-900 transition z-10"
+        >
+          ➡
+        </button>
+      </div>
+    </section>
+
+    <!-- CARRUSEL DE AUTORES -->
+    <section class="bg-gray-200 py-10 mt-10">
+      <h2 class="text-3xl font-semibold text-center mb-6">
+        Conoce a los Autores
+      </h2>
+      <div class="max-w-4xl mx-auto overflow-hidden relative">
+        <div id="carousel" class="flex transition-transform duration-300">
+          <div class="min-w-full p-6 bg-white shadow-lg text-center rounded-lg">
+            <h3 class="text-xl font-semibold">Andrés Luna</h3>
+            <p class="text-gray-600">Software Developer - UNETI</p>
+            <blockquote class="italic mt-4">
+              "La informática es el arte de controlar la complejidad."
+            </blockquote>
+          </div>
+          <div class="min-w-full p-6 bg-white shadow-lg text-center rounded-lg">
+            <h3 class="text-xl font-semibold">Kilmer Hernandez</h3>
+            <p class="text-gray-600">.Net Developer - UNETI</p>
+            <blockquote class="italic mt-4">
+              "Los programas deben funcionar correctamente antes de ser
+              rápidos."
+            </blockquote>
+          </div>
+          <div class="min-w-full p-6 bg-white shadow-lg text-center rounded-lg">
+            <h3 class="text-xl font-semibold">Franklin Hernandez</h3>
+            <p class="text-gray-600">
+              Especialista de Análisis Crediticio - UNETI
+            </p>
+            <blockquote class="italic mt-4">
+              "La innovación distingue a los líderes de los seguidores."
+            </blockquote>
+          </div>
+          <div class="min-w-full p-6 bg-white shadow-lg text-center rounded-lg">
+            <h3 class="text-xl font-semibold">Mariam Ortiz</h3>
+            <p class="text-gray-600">Especialista de Soporte TI - UNETI</p>
+            <blockquote class="italic mt-4">
+              "La tecnología debe mejorar la vida, no complicarla."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white text-center py-6 mt-10">
+      <p>📌 Blog desarrollado para explorar el impacto de la IA en Venezuela</p>
+      <p>© 2025 - Proyecto Educativo IA</p>
+    </footer>
+  </body>
+</html>
